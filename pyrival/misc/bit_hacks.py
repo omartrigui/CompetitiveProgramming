@@ -20,3 +20,11 @@ def sum_of_subsets(K, D):
         for i in range(1 << K):
             if i & 1 << b:
                 D[i] += D[i ^ (1 << b)]
+
+
+def count_set_bits(n):
+    count = 0
+    while n:
+        n &= n - 1
+        count += 1
+    return count
